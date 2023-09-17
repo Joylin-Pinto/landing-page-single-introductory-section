@@ -1,0 +1,148 @@
+ 
+  @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap');
+  @import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap');
+ 
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+body{
+    height: 100vh;
+    display: grid;
+    place-items: center;
+    background-color: hsl(257, 40%, 49%);
+    background-image: url(./images/bg-desktop.svg);
+    background-size:contain;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+main{
+    width: 75%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content:space-evenly; 
+}
+.wrapper{ 
+    display: flex;
+    flex-direction: row;
+    color: #fff;
+    gap: 20px;
+}
+main .logo{
+    margin-right: auto;
+    width: 200px;
+}
+.wrapper .illustration{
+    width: 59%;
+}
+.wrapper .content{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 30px; 
+    margin-top: 40px;
+}
+.wrapper .content h1{
+    font-family: 'Poppins', sans-serif;
+    font-size: 2.5rem;
+    font-weight: 600;
+}
+.wrapper .content p{
+    font-family: 'Open Sans', sans-serif;
+    font-size: 15.8px;
+    font-weight: 400;
+    line-height: 25px;
+}
+.wrapper .content button{
+    align-self: flex-start;
+    background-color: #fff;
+    padding: 15px 60px;
+    border: none;
+    outline: none;
+    border-radius: 50px;
+    color: hsl(257, 40%, 49%);
+    font-weight: 400;
+    font-size: 1rem;
+    font-family: 'Poppins', sans-serif;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+}
+.wrapper .content button:hover{
+    background-color: hsl(300, 69%, 71%);
+    color: #fff;
+    cursor: pointer;
+}
+
+.socials{
+    align-self: flex-end;
+    display: flex;
+    gap: 30px;
+}
+.socials:hover{
+    cursor: pointer;
+}
+ 
+.icon{
+    width: 40px;
+    height: 40px;
+    border: 2px solid white;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.icon:hover{
+    border: 2px solid hsl(300, 69%, 71%);
+}
+.icon i{
+    color: #fff;
+}
+.icon:hover i{
+    color: hsl(300, 69%, 71%);
+}
+
+@media (min-width:100px) and (max-width:375px) {
+    body{ 
+        background-image: url(./images/bg-mobile.svg);
+        background-size: auto;
+        background-position: top;
+    }
+    main{
+        width: 85%;
+        margin: 30px 50px; 
+        gap: 50px;
+        align-items: center;
+        justify-content: center;
+
+    }
+    main .logo{
+        width: 150px;
+    }
+    .wrapper{
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+    .wrapper .illustration{
+        width: 100%;
+    }
+    .wrapper .content{
+        text-align: center; 
+    }
+    .wrapper .content button{
+        align-self: center;
+    }
+    .wrapper .content h1{
+        font-size: 1.5rem;
+    }
+    .wrapper .content p{
+        padding-inline: 3%;
+    }
+    .socials{
+        align-self: center;
+    }
+}
+
